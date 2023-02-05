@@ -1,0 +1,46 @@
+We are using tailwindcss,
+add cdn link, and config for font.
+
+For qrcode library, go to cdnjs.com 
+copy the script.
+
+-------------------------------------------------------------------
+
+TAILWINDCSS:
+
+https://tailwindcss.com/docs/installation
+
+use the CLI method.
+
+For me the styles were not applying, then i checked.
+
+The second step,
+adding /** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+} 
+to tailwindcss config file was the problem.
+
+Please read https://tailwindcss.com/docs/content-configuration
+
+replace it with ,
+ content: [
+    './**/*.{html,js}',
+  ],
+
+
+--------------------------------------------------------------------
+
+
+to write styles for mobile, first write style for mobile and then override for other screens, 
+for example, we want div1 div2 as flex-row in larger screens and as flex-col-reverse in mobile, you have 
+to specify as 
+ <div class="flex flex-col-reverse md:flex-row">
+            <div>Div 1</div>
+            <div>Div 2</div>
+        </div>   
+-----------------------------------------------------------------
