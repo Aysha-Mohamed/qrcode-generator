@@ -44,3 +44,7 @@ to specify as
             <div>Div 2</div>
         </div>   
 -----------------------------------------------------------------
+
+
+
+After commiting, an error occured in tailwindcss output file. outpu.css not available. the path was given as /dist/output.css in html. Changed it to ./dist/output.css 
